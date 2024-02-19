@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>note</title>
+</head>
+
+<body>
+    <h2>a text area that accepts 50 characters using js</h2>
+    <textarea onkeypress="nam()" name="" id="area" cols="30" rows="10"></textarea>
+    <p id="ptag"></p>
+</body>
+
+</html>
+<script>
+    let area = document.getElementById('area')
+    function nam() {
+        if (area.value.length == 50) {
+            area.value = area.value.slice(0, -1)
+        }
+        ptag.innerHTML=`${area.value.length+1}of 50`
+    }
+</script>
