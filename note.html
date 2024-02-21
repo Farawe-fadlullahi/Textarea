@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <h2>a text area that accepts 50 characters using js</h2>
-    <textarea onkeypress="nam()" name="" id="area" cols="30" rows="10"></textarea>
+    <h2>a text area that accepts 50 characters using js with auto change singulars to plural for (is,boy,girl,that,horse,candy,witch,hoof,bacterium,news,man,nucleus,fungus,woman,goose,loaf)</h2>
+    <textarea onkeyup="chg()" onkeypress="nam()" name="" id="area" cols="30" rows="10"></textarea>
     <p id="ptag"></p>
 </body>
 
@@ -21,5 +21,23 @@
             area.value = area.value.slice(0, -1)
         }
         ptag.innerHTML=`${area.value.length+1}of 50`
+    }
+    function chg(){
+            area.value = area.value.replace('is','are');
+            area.value = area.value.replace('boy','boys');
+            area.value = area.value.replace('girl','girls');
+            area.value = area.value.replace('that','those');
+            area.value = area.value.replace('horse','horses');
+            area.value = area.value.replace('candy','candies');
+            area.value = area.value.replace('witch','witches');
+            area.value = area.value.replace('hoof','hooves');
+            area.value = area.value.replace('bacterium','bacteria');
+            area.value = area.value.replace('news','news');
+            area.value = area.value.replace('man','men');
+            area.value = area.value.replace('nucleus','nuclei');
+            area.value = area.value.replace('fungus','fungi');
+            area.value = area.value.replace('woman','women');
+            area.value = area.value.replace('goose','geese');
+            area.value = area.value.replace('loaf','loaves');
     }
 </script>
